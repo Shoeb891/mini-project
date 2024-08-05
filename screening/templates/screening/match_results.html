@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Matching Results</h2>
+<table>
+    <tr>
+        <th>Candidate Name</th>
+        <th>Similarity Score</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <td>{{ result.candidate_name }}</td>
+        <td>{{ result.similarity_score }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
